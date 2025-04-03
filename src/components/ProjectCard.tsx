@@ -65,10 +65,12 @@ export function ProjectCard({ project }: CardProps) {
       className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition-shadow cursor-pointer"
     >
       <div className="flex items-start">
-        <div className="flex items-center gap-4">
+        <div className="flex items-start gap-4">
           {renderLogo()}
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-gray-900 dark:text-white">{project.name}</h3>
+          
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-[3px]">{project.name}</h3>
+            <img src={`https://img.shields.io/github/stars/${project.github.split('/')[3]}/${project.github.split('/')[4]}`} alt="Github Stars" className="mb-[10px]"/>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">{project.description}</p>
           </div>
         </div>

@@ -52,7 +52,10 @@ export function DetailPage() {
                 </div>
               )}
               <div>
-                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">{project.name}</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                  {project.name}
+                  <img src={`https://img.shields.io/github/stars/${project.github.split('/')[3]}/${project.github.split('/')[4]}`} alt="Github Stars" className="inline ml-[20px] mb-[2px]"/>
+                </h1>
                 <div className="flex flex-wrap gap-2">
                   {project.category.map((cat) => (
                     <span
