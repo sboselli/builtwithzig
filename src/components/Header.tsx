@@ -36,10 +36,12 @@ export function Header({ onSearch }: HeaderProps) {
         <div className="flex justify-between items-center h-16">
           {/* Logo and Title */}
           <div className="flex items-center space-x-3">
-            <img src={zigLogo} alt="Zig Logo" className="h-8 w-8" />
-            <span className="text-lg font-semibold text-gray-900 dark:text-white hidden md:inline">
+            <a href="/">
+            <img src={zigLogo} alt="Zig Logo" className="h-8 w-8" /></a>
+            <a href="/"><span className="text-lg font-semibold text-gray-900 dark:text-white hidden md:inline">
               Built with Zig
-            </span>
+            </span></a>
+            
           </div>
 
           {/* Search Bar - Desktop */}
