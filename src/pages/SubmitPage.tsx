@@ -41,12 +41,12 @@ export function SubmitPage() {
         </Link>
 
         <div className="max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 sm:p-8">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 dark:text-white">Submit an AI Agent</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-gray-900 dark:text-white">Submit a Zig project</h1>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Agent Name *
+                Project Name *
               </label>
               <input
                 type="text"
@@ -159,7 +159,7 @@ export function SubmitPage() {
               type="submit"
               className="w-full px-4 py-2 rounded-lg bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
             >
-              Submit Agent
+              Submit Zig project
             </button>
           </form>
         </div>

@@ -1,4 +1,4 @@
-export interface Agent {
+export interface Project {
   id: string;
   name: string;
   website: string;

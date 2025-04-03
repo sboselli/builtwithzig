@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { Header } from '../components/Header';
-import { AgentCard } from '../components/AgentCard';
-import { agents, categories } from '../data/agents';
+import { ProjectCard } from '../components/ProjectCard';
+import { projects, categories } from '../data/projects';
 
 export function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   
-  const filteredAgents = agents.filter(agent => {
-    const matchesCategory = !selectedCategory || agent.category.includes(selectedCategory);
+  const filteredProjects = projects.filter(project => {
+    const matchesCategory = !selectedCategory || project.category.includes(selectedCategory);
     const matchesSearch = !searchTerm || 
-      agent.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      agent.description.toLowerCase().includes(searchTerm.toLowerCase());
+    project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    project.description.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesCategory && matchesSearch;
   });
@@ -23,29 +23,14 @@ export function HomePage() {
       <main className="max-w-7xl mx-auto py-8">
         <div className="text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-            Discover Amazing{' '}
+            Discover Amazing Projects{' '}
             <span className="inline-block bg-blue-600 text-white dark:bg-blue-500 dark:text-white px-2 py-1 rounded transform rotate-2">
-              AI Agents
+              Built with Zig
             </span>
           </h1>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Explore our curated collection of AI agents and tools to enhance your workflow.
+            Explore our curated collection of projects built with Zig.
           </p>
-          <div className="mt-4 flex justify-center">
-            <a 
-              href="https://www.producthunt.com/posts/github-915ffd46-5c12-48c9-a233-96c8c7710ce0?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-github&#0045;915ffd46&#0045;5c12&#0045;48c9&#0045;a233&#0045;96c8c7710ce0" 
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img 
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=560712&theme=light" 
-                alt="GitHub - Dambrubaba/directory-boilerplate | Product Hunt" 
-                style={{ width: '250px', height: '54px' }}
-                width="250" 
-                height="54" 
-              />
-            </a>
-          </div>
         </div>
 
         {/* Category Filter - Changed to wrap on mobile */}
@@ -67,8 +52,8 @@ export function HomePage() {
         </div>
 
         <div className="mt-8 grid gap-6 px-4 sm:px-6 lg:px-8 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredAgents.map((agent) => (
-            <AgentCard key={agent.id} agent={agent} />
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </main>

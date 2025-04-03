@@ -7,7 +7,7 @@ export function Footer() {
   const handleFeedbackSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Create mailto link with feedback
-    const mailtoLink = `mailto:dambrureddy321@gmail.com?subject=Directory Boilerplate Feedback&body=${encodeURIComponent(feedback)}`;
+    const mailtoLink = `mailto:sboselli@gmail.com?subject=Built with Zig Feedback&body=${encodeURIComponent(feedback)}`;
     window.location.href = mailtoLink;
     setFeedback('');
   };
@@ -21,7 +21,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Connect With Us</h3>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://x.com/scionofshiv"
+                href="https://x.com/sanbsll"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"
@@ -30,7 +30,7 @@ export function Footer() {
                 <span>Follow on X</span>
               </a>
               <a
-                href="https://github.com/dambrubaba"
+                href="https://github.com/sboselli"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
@@ -39,7 +39,7 @@ export function Footer() {
                 <span>View on GitHub</span>
               </a>
               <a
-                href="mailto:dambrureddy321@gmail.com"
+                href="mailto:sboselli@gmail.com"
                 className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
               >
                 <Mail className="h-5 w-5" />
@@ -50,7 +50,7 @@ export function Footer() {
             {/* Support Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
               <a
-                href="https://github.com/dambrubaba/directory-boilerplate"
+                href="https://github.com/sboselli/builtwithzig/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
@@ -59,7 +59,7 @@ export function Footer() {
                 <span>Star on GitHub</span>
               </a>
               <a
-                href="https://buymeacoffee.com/damburudhar"
+                href="https://buymeacoffee.com/sboselli"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFDD00] text-black rounded-lg hover:bg-[#FFDD00]/90 transition-colors"
@@ -93,7 +93,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} Directory Boilerplate. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Built with Zig. All rights reserved.</p>
         </div>
       </div>
     </footer>
