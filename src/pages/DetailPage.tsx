@@ -29,7 +29,7 @@ export function DetailPage() {
           className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8"
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to directory
+          Back to Zig projects
         </Link>
 
         <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 sm:p-8">
